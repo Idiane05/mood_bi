@@ -6,17 +6,17 @@ class VerseScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Retrieve the mood passed from MoodScreen
+    //  The mood passed from MoodScreen
     final String mood = ModalRoute.of(context)!.settings.arguments as String;
 
-    // Determine the background image based on the mood
+    // determining the image based on the images.
     String backgroundImage;
     if (mood == 'happy') {
-      backgroundImage = 'assets/happy.jpeg'; // Replace with your actual image
+      backgroundImage = 'assets/happy.jpeg'; // replaced with happy image
     } else if (mood == 'confused') {
-      backgroundImage = 'assets/confused.jpeg'; // Replace with your actual image
+      backgroundImage = 'assets/confused.jpeg'; // replaced with confused image.
     } else if (mood == 'sad') {
-      backgroundImage = 'assets/sad.jpeg'; // Replace with your actual image
+      backgroundImage = 'assets/sad.jpeg'; // Replaced with background image with your actual image
     } else {
       backgroundImage = 'assets/default.jpeg'; // Fallback image
     }
@@ -42,7 +42,7 @@ class VerseScreen extends StatelessWidget {
                 return Center(
                   child: Text(
                     "Error: ${snapshot.error}",
-                    style: const TextStyle(color: Color.fromARGB(255, 17, 17, 17), fontSize: 18),
+                    style: const TextStyle(color: Color.fromARGB(255, 241, 234, 234), fontSize: 18),
                   ),
                 );
               } else {
@@ -54,7 +54,7 @@ class VerseScreen extends StatelessWidget {
                       style: const TextStyle(
                         fontSize: 20,
                         fontStyle: FontStyle.italic,
-                        color: Color.fromARGB(255, 54, 50, 50),
+                        color: Color.fromARGB(255, 238, 231, 231),
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -67,8 +67,8 @@ class VerseScreen extends StatelessWidget {
             top: 40,
             left: 20,
             child: FloatingActionButton(
-              backgroundColor: Colors.black54,
-              child: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 63, 47, 47)),
+              backgroundColor: const Color.fromARGB(137, 245, 241, 241),
+              child: const Icon(Icons.arrow_back, color: Color.fromARGB(255, 238, 235, 235)),
               onPressed: () {
                 Navigator.pop(context);
               },

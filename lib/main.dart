@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const WelcomeScreen(),
         '/mood': (context) => const MoodScreen(),
-        // ignore: prefer_const_constructors
-        '/verse': (context) => VerseScreen(), // No need for const because it uses arguments
+        
+        '/verse': (context) => const VerseScreen(), // No need for const because it uses arguments
       },
       debugShowCheckedModeBanner: false,
     );

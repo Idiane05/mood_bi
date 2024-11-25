@@ -16,10 +16,10 @@ class MoodScreen extends StatelessWidget {
               ),
             ),
           ),
-          Column(
+          const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
+              Text(
                 "How are you feeling today?",
                 style: TextStyle(
                   fontSize: 24,
@@ -27,7 +27,7 @@ class MoodScreen extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              const SizedBox(height: 20),
+              SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -60,22 +60,22 @@ class EmojiButton extends StatelessWidget {
   final String emoji;
   final String label;
   final String mood;
-  // ignore: prefer_const_constructors_in_immutables, use_key_in_widget_constructors
-  EmojiButton({required this.emoji, required this.label, required this.mood});
+  
+  const EmojiButton({super.key, required this.emoji, required this.label, required this.mood});
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         IconButton(
-          // ignore: prefer_const_constructors
-          icon: Text(emoji, style: TextStyle(fontSize: 40)),
+          // adding icon button
+          icon: Text(emoji, style: const TextStyle(fontSize: 40)),
           onPressed: () {
-            // Pass the mood as an argument to VerseScreen
+            // passing the arguments 
             Navigator.pushNamed(context, '/verse', arguments: mood);
           },
         ),
-        // ignore: prefer_const_constructors
-        Text(label, style: TextStyle(color: Colors.white)),
+        
+        Text(label, style: const TextStyle(color: Colors.white)),
       ],
     );
   }
